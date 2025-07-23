@@ -24,6 +24,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Updated `ElevenLabsTTSService` to handle the case where
+  `allow_interruptions=False`. Now, when interruptions are disabled, the same
+  context ID will be used throughout the conversation.
+
 - Updated the `deepgram` optional dependency to 4.7.0, which downgrades the
   `tasks cancelled error` to a debug log. This removes the log from appearing
   in Pipecat logs upon leaving.
